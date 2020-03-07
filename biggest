@@ -1,0 +1,24 @@
+package controlflow;
+import java.util.Scanner;
+public class conditiondemo
+{
+	public static void main(String[] args) 
+	{
+		//create input stream object
+		Scanner sc= new Scanner (System.in);
+		//declare three variables
+		int a,b,biggest;
+		//prompt the user for input a
+		System.out.println("enter the first number");
+		//accept number from key board and store it in variable a
+		a=sc.nextInt();
+		//prompt the user for input b
+		System.out.println("enter the second number");
+		//accept number from key board 
+		b=sc.nextInt();
+biggest=a>b?a:b;
+System.out.println("biggest number is:"+biggest);
+
+	}
+
+}
