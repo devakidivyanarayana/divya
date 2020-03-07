@@ -1,0 +1,47 @@
+package mythreads;
+class Eventhread extends Thread
+{
+	Eventhread()
+	{
+		setName("Even Thread");
+		}
+	public void run()
+	{
+		System.out.println("Current thread:"+Thread.currentThread().getName());
+		for(int i=2;i<=20;i+=2)
+		{
+			System.out.print(i+"\t");
+		}
+		}
+		
+}
+//create own thread class by implementing java.lang.Runnable interface
+class Oddthread implements Runnable
+{
+	Oddthread()
+	{
+	}
+	
+	public void run()
+	{
+		System.out.println("Current thread:"+Thread.currentThread().getName());
+		for(int i=1;i<=20;i+=2)
+		{
+			System.out.print(i+"\t");
+			
+		}
+
+	}
+}
+public class Threaddemo {
+	public static void main(String args[])
+	{
+		// todo Auto-generated method stub
+		Oddthread ot=new Oddthread();
+		Eventhread et=new Eventhread();
+		
+		ot.run();
+		et.start();
+}
+}
+	
