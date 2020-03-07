@@ -1,0 +1,34 @@
+class Car
+{
+//attributes or properties
+public String carName;
+public String carColour;
+public int wheels;
+public int brakes;
+// metohd definitions
+public void move()
+{
+System.out.println("Car"+carName+"moves with"+wheels+"wheels.");
+}
+public void stop()
+{
+System.out.println("Car"+carName+"stops with"+brakes+"brakes.");
+}
+}//end of car class
+public class Cardemo
+{
+public static void main(String args[])
+{
+//create object for car class
+Car p= new Car();
+// set values to the attributes of bird object p
+p.carName="Eicher";
+p.carColour="Grey";
+p.wheels=2;
+p.brakes=1;
+//call method via object
+p.move();
+//call another method through object
+p.stop();
+}//end of main method block
+}//end of Birddemo class block
