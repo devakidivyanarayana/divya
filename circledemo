@@ -1,0 +1,28 @@
+class Circle
+{
+public double r;
+public double pi;
+public double area;
+public double perimeter;
+public void area()
+{
+area=pi*r*r;
+System.out.println(" area is "+area+ ".");
+}
+public void perimeter()
+{
+perimeter=pi*r;
+System.out.println("perimeter is "+perimeter +".");
+}
+}
+public class Circledemo
+{
+public static void main(String args[])
+{
+Circle p= new Circle();
+p.r=2;
+p.pi=22.7;
+p.area();
+p.perimeter();
+}
+}
