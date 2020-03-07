@@ -1,0 +1,33 @@
+package controlflow;
+
+import java.util.Scanner;
+public class Menu
+{
+public static void main(String[] args)
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("\t\tMenu");
+	int choice;
+	do
+	{
+		System.out.println("\n1.Pizza");
+		System.out.println("\n2.Burger");
+		System.out.println("\n3.Sandwitch");
+		System.out.println("\n4.No hungry");
+		System.out.println("enter your choice:");
+		choice=sc.nextInt();
+		if(choice>0&&choice<4|| choice==4)
+		{
+			break;
+		}
+		}while(choice>0&&choice<5);
+		if(choice!=4)
+			System.out.println("preparing");
+		switch(choice)
+		case 1: System.out.println("Pizza will be delivered in 20 minutes"); break;
+		case 2:System.out.println("Burger"); break;
+		case 3:System.out.println("sandwitch"); break;
+		default:System.out.println("Thankyou..visit again"); break;
+		}
+}
+			
