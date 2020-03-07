@@ -1,0 +1,35 @@
+class Bird
+{
+//attributes or properties
+public String birdName;
+public String birdColour;
+public int legs;
+public int wings;
+private boolean canSing;
+// methd definitions
+public void walk()
+{
+System.out.println("Bird"+birdName+"walks with"+legs+"legs");
+}
+public void fly()
+{
+System.out.println("Bird"+birdName+"flies with"+wings+"wings.");
+}
+}//end of bird class
+public class Birddemo
+{
+public static void main(String args[])
+{
+//create object for bird class
+Bird p= new Bird();
+// set values to the attributes of bird object p
+p.birdName="parrot";
+p.birdColour="Green";
+p.legs=2;
+p.wings=2;
+//call method via object
+p.walk();
+//call another method through object
+p.fly();
+}//end of main method block
+}//end of Birddemo class block
