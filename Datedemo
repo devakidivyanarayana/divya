@@ -1,0 +1,24 @@
+package Datedemo;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Datedemo {
+
+	 
+		public static void main(String[] args)
+		{
+			Date  d=new Date();
+			System.out.println(d);
+			Date d1=new Date(d.getTime()+1000);
+			 System.out.println(d.after(d1));
+			System.out.println(d.before(d1));
+			System.out.println(d1.compareTo(d)); 
+		 System.out.println(d.compareTo(d1)); 
+		SimpleDateFormat sdf=new SimpleDateFormat("M-F-Y Z");
+		Date dob=new Date("20/10/1975");
+		 System.out.println("My birthday is on " +sdf.format(dob)); 
+			
+		}
+}
+		
