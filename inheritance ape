@@ -1,0 +1,49 @@
+package inheritance;
+
+public class species {
+	//attributes
+	private String speciesName;
+	//no-arg constructor
+	species()
+	{
+		System.out.println("Species Constructed");
+	}
+
+}
+
+
+package inheritance;
+
+public class Ape extends species{
+	private int tails;
+	public Ape()
+	{
+		super();
+		System.out.println("Ape obect created");
+	}
+}
+
+
+
+package inheritance;
+
+public class Human extends Ape{
+private int heads;
+private int hands;
+private int legs;
+Human()
+{
+	System.out.println("Human object created");
+}
+}
+
+
+package inheritance;
+
+public class Multileveldemo 
+{
+	public static void main(String args[])
+{
+Human h= new Human();
+}
+}
