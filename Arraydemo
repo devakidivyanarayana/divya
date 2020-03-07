@@ -1,0 +1,39 @@
+package Arraydemo;
+
+
+
+public class Arraydemo 
+
+{
+
+public static void main(String args[])
+
+  {
+
+  int subjects[];
+
+  String computer_languages[]={"c","c++","java"};
+
+  String trainerNames[]={"shabber","kesava","harish"};
+
+  for(String trainerName : trainerNames)
+
+  {
+
+	System.out.println(trainerName);
+
+  }
+
+  int student_marks[][];
+
+  int StudentMarks[][]=new int[2][3];
+
+  int marks[][][];
+
+  int inter_marks[][][]={{{45,52,75},{45,52,75},{45,52,75}},{{45,52,75},{45,52,75},{45,52,75}}};
+
+ }
+
+
+
+}
