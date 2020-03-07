@@ -1,0 +1,119 @@
+//create own thread by extending java.lang.Thread class
+
+class Eventhread extends Thread
+
+{
+
+	//constructor to intiatlize values to the properties of class or super class
+
+	// to set the values to super class 
+
+	Eventhread()
+
+	{
+
+		setName("Even thread");
+
+	}
+
+	public void run()
+
+	{
+
+		System.out.println("Current thread:"+Thread.currentThread().getName());
+
+		for(int i=2;i<=20;i+=2)
+
+		{
+
+			System.out.print(i+"\t");
+
+			try {
+
+				Thread.currentThread().sleep(5000);
+
+			} catch (InterruptedException e) {
+
+				// TODO Auto-generated catch block
+
+				e.printStackTrace();
+
+			}
+
+
+
+		}
+
+	}
+
+}
+
+class Oddthread implements Runnable
+
+{
+
+	Oddthread()
+
+	{
+
+		
+
+	}
+
+
+
+	@Override
+
+	public void run() {
+
+		// TODO Auto-generated method stub
+
+		System.out.println("Current thread:"+Thread.currentThread().getName());
+
+		for(int i=1;i<=20;i+=2)
+
+		{
+
+			System.out.print(i+"\t");
+
+		}
+
+
+
+		
+
+	}
+
+	public void start(){
+
+		
+
+	}
+
+}
+
+public class Threaddemo2Sleep {
+
+
+
+	
+
+	public static void main(String[] args) {
+
+		Oddthread ot = new Oddthread();
+
+		Eventhread et = new Eventhread();
+
+		et.setName("Even Thread");
+
+		ot.run();
+
+		et.start();
+
+
+
+	}
+
+
+
+}
