@@ -1,0 +1,103 @@
+package immutablelms;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+enum Currency{Dollar,Rupee,Yen};
+enum Department{Sales,Marketing,Production};
+//create immutable class
+final class Company
+{
+	private String companyName;
+	private int registrationNumber;
+	public List<Employee>elist;
+	public String deptarray[];
+	//no setters write only getters
+	//set values to private properties through constructor
+	Company(String companyName,int registrationNumber)
+	{
+		this.companyName=companyName;
+		this.registrationNumber=registrationNumber;
+	}
+	public String getCompanyName() {
+		return companyName;
+	}
+		public int getRegistrationNumber() {
+		return registrationNumber;
+	}
+public Employee registerEmployee()
+{
+	return new Employee();
+}
+}
+//it is mutable class means objects of employee class allows to change their state (we use string builder here it is asynchronized )
+class Employee
+{
+	private StringBuilder empName;
+	private int empCode;
+	private Currency salaryType;
+	private float salary;
+	public StringBuilder getEmpName() {
+		return empName;
+	}
+	public int getEmpCode() {
+		return empCode;
+	}
+	public Currency getSalaryType() {
+		return salaryType;
+	}
+	public float getSalary() {
+		return salary;
+	}
+	public void setEmpName(StringBuilder empName) {
+		this.empName = empName;
+	}
+	public void setEmpCode(int empCode) {
+		this.empCode = empCode;
+	}
+	public void setSalaryType(Currency salaryType) {
+		this.salaryType = salaryType;
+	}
+	public void setSalary(float salary) {
+		this.salary = salary;
+	}
+		
+	}
+	public class Myimmutable {
+	public static void main (String[] args) throws IOException {
+		//TODO Auto-generated method stub
+		Company c1=new Company("HCL",12345);
+		Company c2=c1;
+		c2=new Company("WIPRO",9999);
+		//c2.getComapnyName().replace('w','p');
+		Currency money=Currency.Rupee;
+				//c1=null;
+		System.out.println(money);
+		System.out.println("Company:"+c1.getCompanyName()+"RegistrationNumber:"+c1.getRegistrationNumber());
+		System.out.println("Company:"+c2.getCompanyName()+"RegistrationNumber:"+c2.getRegistrationNumber());
+char reply;
+c1.elist=new ArrayList<Employee>();
+do
+{
+	Employee e=c1.registerEmployee();
+	System.out.println("Enter Employee Code:");
+	//create input stream object
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+e.setEmpCode(Integer.parseInt(br.readLine()));
+System.out.println("Enter Employee Name:");
+e.setEmpName(new StringBuilder(br.readLine()));
+c1.elist.add(e);
+System.out.println("Wish to add more?(y/n)");
+reply=br.readLine().toLowerCase().charAt(0);
+}while(reply=='y');
+for(Employee emp:c1.elist)
+{
+	System.out.println(emp.getEmpCode()+"\t"+emp.getEmpName());
+}
+	}
+	}
+
+	
+
+
