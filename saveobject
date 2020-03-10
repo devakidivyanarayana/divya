@@ -1,0 +1,77 @@
+package myio;
+import java.io.Serializable;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.ObjectOutputStream;
+class Bird
+{
+	private String birdname;
+	private String birdColor;
+	public void fly(){}
+	public void walk(){}
+	public String getBirdname() {
+		return birdname;
+	}
+	public String getBirdColor() {
+		return birdColor;
+	}
+	public void setBirdname(String birdname) {
+		this.birdname = birdname;
+	}
+	public void setBirdColor(String birdColor) {
+		this.birdColor = birdColor;
+	}
+	}
+class Student implements Serializable
+{
+	private int studentId;
+	private String studentName;
+	public int getStudentId(){
+		return studentId;
+	}
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+	public String getStudentName() {
+		return studentName;
+	}
+}
+
+public class Saveobjects {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		//create student object
+		Student s1=new Student();
+		//create input stream reader object
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+//prompt the user for student id
+System.out.println("Enter student id:");
+//accept the data from key board to set value to the student id
+s1.setStudentId(Integer.parseInt(br.readLine()));
+//prompt the user for student name
+System.out.println("Enter student name:");
+s1.setStudentName(br.readLine());
+SaveStudent(s1);
+	}
+
+	private static void SaveStudent(Student s) throws IOException
+	{
+		// create file object
+		File file=new File("students.dat");
+		//create file output stream object
+		FileOutputStream fos=new FileOutputStream(file);
+		//create object output stream object
+		ObjectOutputStream oos=new ObjectOutputStream(fos);
+		oos.writeObject(s);
+		System.out.println("Student object saved to student.dat file sucesfully");
+	}
+}
+	
+	
