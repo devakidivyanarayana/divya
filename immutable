@@ -1,0 +1,16 @@
+package immutablelms;
+
+public class Immutabilitytest {
+	public static void main (String[] args)
+	{
+		// type wrapper classes are immutable like strings class
+		Integer x=10;
+		change(x);
+		System.out.println(x);
+			}
+static void change(Integer i)
+{
+	i=20;
+}
+}
+
