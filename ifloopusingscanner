@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Loop {
+public static void main(String args[])
+{
+// initializing age by using integer data type
+	int x;
+//using scanner to take values from from user
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter an integer: ");
+int x1 = sc.nextInt();
+	System.out.println(x1);
+//using if loop to check age
+	if(x1>3)
+	{
+		System.out.println("code is correct");
+}
+}
+}
