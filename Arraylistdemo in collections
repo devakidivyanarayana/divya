@@ -1,0 +1,84 @@
+package mycollections;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Vector;
+public class Arraylistdemo {
+	public static void main(String[] args)
+	{
+		//create heterogeneous collection
+		List listofobjects=new ArrayList();
+		List<Integer>ranklist=new ArrayList();
+		List<String>departmentList=new Vector();
+		//add ranks to ranklist
+		ranklist.add(43);
+		ranklist.add(5);
+		ranklist.add(77);
+		ranklist.add(3);
+		//display rank list
+		for(Integer rank:ranklist)
+		{
+			System.out.println(rank);
+		}
+		//show the rank list in sorting order
+		Collections.sort(ranklist);
+		System.out.println("After sorting, "+ranklist);
+		//add departments
+		((Vector) departmentList).addElement("Operations");
+		((Vector) departmentList).addElement("Sales");
+		//display departments
+		Iterator deptitr=departmentList.iterator();
+		System.out.println("Department List:");
+		while(deptitr.hasNext())
+		{
+			System.out.println(deptitr.next()+"\t");
+		}
+		ArrayList listofObjects=new ArrayList();
+		//a list is a collection of objects that allows duplicates
+		listofObjects.add(1);
+		listofObjects.add(2);
+		listofObjects.add(1);
+		listofObjects.add("Hindustan");
+		listofObjects.add("Aeronautics");
+		listofObjects.add("Limited");
+		listofObjects.add("Turnover");
+		listofObjects.add(100000);
+		listofObjects.add("Dollars");
+		//print the list
+		System.out.println("Afterremoval of 2nd element,collection in memory:");
+		System.out.println(listofObjects);
+		if(listofObjects.contains("Dollars"))
+		{
+			System.out.println("Turnover is in Dollars");
+		}
+		else
+		{
+			System.out.println("Turnover in Rupees");
+		}
+	Iterator itr=listofObjects.iterator();
+	while(itr.hasNext())
+	{
+		Object element=itr.next();
+		if(element instanceof String)
+		{
+		System.out.println(element+"");
+		}else if(element instanceof Long)
+		{
+			System.out.println("element");
+		}else if(element instanceof Integer)
+		{
+			System.out.println("Integer"+element);
+	}
+	}
+	
+//display a collection using enhanced for loop
+	System.out.println("Showing elements of Arraylist:");
+for(Object o:listofObjects)
+{
+	System.out.println(o);
+}
+}
+}
+	
+
