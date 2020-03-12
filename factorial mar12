@@ -1,0 +1,33 @@
+package Math;
+
+import java.util.Scanner;
+
+public class Findfactorial {
+
+	 public static void main(String args[])
+	 {
+		 int n;
+		// taking input from key board 
+		 Scanner sc=new  Scanner(System.in);
+		 System.out.println("Enter a number");
+		 n=sc.nextInt();
+		 long factorial=findFactorial(n);
+		 System.out.println("Factorial of"+n+"is"+factorial);
+	 }
+	 public static long findFactorial(long x)
+	 {
+		 long fact=1L;
+		 if(x==0||x==1)
+			 return 1;
+		 else
+		 {
+			 fact=x;
+			 while(x>1)
+			 {
+				 fact=fact*(x-1);
+				 x--;
+			 }
+			 return fact;
+		 }
+	 }
+}
