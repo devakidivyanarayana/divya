@@ -1,0 +1,32 @@
+package divya;
+
+import java.util.Scanner;
+
+public class Negative {
+	public static void main(String[] args) {
+
+		// TODO Auto-generated method stub
+
+		int a;
+// to take input from key board
+		Scanner sc=new Scanner(System.in);
+
+		System.out.println("enter Number:");
+
+		a=sc.nextInt();
+		// condition to tell positive number
+		if(a>0)
+		{
+            System.out.println(a+" is a positive number");
+        }
+        // condition to find negative number
+		else if(a < 0)
+        {
+            System.out.println(a+" is a negative number");
+        }
+        else
+        {
+            System.out.println(a+" is neither 0");
+        }
+    }
+}
