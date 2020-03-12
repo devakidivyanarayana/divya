@@ -1,0 +1,58 @@
+package divya;
+// importing form util package to take input from keyboard
+import java.util.Scanner;
+public class Month {
+	public static void main(String[] args)
+	{
+	// used to take input from key board
+		Scanner sc=new Scanner(System.in);
+	System.out.println("enter a");
+	//using variable a to  take input of month numbers
+	int a=sc.nextInt();
+	//using switch case to find the month
+switch(a)
+{
+	case 1:
+		System.out.println("januray");
+		break;
+	case 2:
+		System.out.println("february");
+		break;
+	case 3:
+		System.out.println("march");
+		break;
+	case 4:
+		System.out.println("April");
+		break;
+	case 5:
+		System.out.println("may");
+		break;
+	case 6:
+		System.out.println("june");
+		break;
+	case 7:
+		System.out.println("july");
+		break;
+	case 8:
+		System.out.println("August");
+		break;
+	case 9:
+		System.out.println("september");
+		break;
+	case 10:
+		System.out.println("october");
+	break;
+	case 11:
+		System.out.println("november");
+		break;
+	case 12:
+		System.out.println("december");
+		break;
+	default:
+		System.out.println("a");
+		break;
+}
+	}
+}
+	
+
