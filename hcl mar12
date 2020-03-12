@@ -1,0 +1,14 @@
+package divya;
+
+public class Hcl<equals> {
+	public static void main(String args[])
+	{
+		// using command line arguments for taking inputs
+		for(String str:args)
+		{
+					System.out.println(str);
+		}
+           System.out.println("HCL TECHNOLOGIES banglore:");
+
+}
+}
