@@ -1,0 +1,18 @@
+public class AreaOfEquilateralTriangle {
+ 
+    public static void main(String[] args) {
+        double side, area;
+        Scanner scanner;
+        scanner = new Scanner(System.in);
+        // Take input from user
+        System.out.println("Enter Length of Side of an Equilateral Triangle");
+        side = scanner.nextDouble();
+ 
+        /*
+         * Area of equilateral triangle = sqrt(3)/4 x Side x Side
+         */
+        area = Math.sqrt(3) / 4 * side * side;
+ 
+        System.out.format("The Area of Equilateral Triangle = %.3f\n", area);
+    }
+}
