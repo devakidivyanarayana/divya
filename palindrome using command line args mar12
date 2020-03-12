@@ -1,0 +1,25 @@
+package divya;
+import java.util.*; 
+public class Commandpalindrome {
+	public static void main(String[] args)
+	{
+		try
+		{
+		// using command line arguments to take input
+			System.out.println(args[0]);
+	}catch(ArrayIndexOutOfBoundsException ae)
+		{
+		System.out.println("give a number");
+		}
+	// using string buffer method to store args value in sb 
+		StringBuffer sb= new StringBuffer(args[0]);
+if(args[0].equals (sb.reverse().toString()))
+{
+	System.out.println("palindrome");
+}
+else
+{
+	System.out.println("not palindrome");
+}
+}
+}
