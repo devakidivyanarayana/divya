@@ -1,0 +1,9 @@
+package divya;
+
+public class Hello {
+public static void main(String args[])
+{
+// using \" \" to print hello in double quotes
+	System.out.println("\"Hello world\"");
+}
+}
